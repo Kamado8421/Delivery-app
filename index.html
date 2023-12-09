@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Delivery</title>
+</head>
+<body>
+  <header>
+    <div class="content-header">
+      <img src="https://telegra.ph///file/83b1afd76b2ac79a4eeaa.png" alt="logo"/>
+      <h1 class="company-name">WEB•LANCHES W.M <code>.::.</code></h1>
+    </div>
+  </header>
+  
+  <h1 id="cardapio">Cardápio</h1>
+  <div class="desc">
+    <p>Pizzas exclusivas no forno a lenha ou deixe-se tentar por nossas massas, antepasto, focaccias, saladas e pratos de Bruscheta. Relaxe no ambiente amigável enquanto aprecia os aromas dos fornos a lenha ou sente-se ao ar livre e aproveite o sol de Mildura.</p>
+  </div>
+  
+  <div class="line"></div>
+  
+  <div class="container">
+    <div class="menu">
+      <div class="photo-pizza">
+        <img src="https://images03.nicepage.io/c461c07a441a5d220e8feb1a/910bd281016d57a199450c15/3981417.jpg" alt="lanche"/>
+      </div>
+      <div class="info-pizza">
+        <h2>Original</h2>
+         <p>Molho de tomate, mussarela e orégano</p>
+         <p class="preco">R$36.00</p>
+         <button onclick="addCart(1)" class="add-cart" >ADICIONAR AO CARRINHO</button>
+      </div>
+    </div>
+    <div class="menu">
+      <div class="photo-pizza">
+        <img src="https://images03.nicepage.io/c461c07a441a5d220e8feb1a/6d842bd1e6e354edb2a8baed/pizza-dark-background-classic-italian-pizza-with-tomatoes-pepper-vegetables-sauce-mozarella-cheese-dark-kitchen-table-copy-space_90380-947.jpg" alt="pizza" alt="lanche"/>
+      </div>
+      <div class="info-pizza">
+        <h2>Salame</h2>
+         <p>Molho de tomate, mussarela e salame suave</p>
+         <p class="preco">R$40.00</p>
+         <button onclick="addCart(2)" class="add-cart" >ADICIONAR AO CARRINHO</button>
+      </div>
+    </div>
+    <div class="menu">
+      <div class="photo-pizza">
+        <img src="https://images03.nicepage.io/c461c07a441a5d220e8feb1a/d087beea5e3b5475974ecfe1/mixed-pizza-with-olive-bell-pepper-tomato_140725-183.jpg" alt="pizza" alt="lanche"/>
+      </div>
+      <div class="info-pizza">
+        <h2>Frango</h2>
+         <p>Molho de tomate, mussarela, frango, abacaxi * e molho para churrasco</p>
+         <p class="preco">R$29.90</p>
+         <button onclick="addCart(3)" class="add-cart" >ADICIONAR AO CARRINHO</button>
+      </div>
+    </div>
+    <div class="menu">
+      <div class="photo-pizza">
+        <img src="https://images03.nicepage.io/c461c07a441a5d220e8feb1a/457320aab346570eb0d91acd/sdw.jpg" alt="pizza" alt="lanche"/>
+      </div>
+      <div class="info-pizza">
+        <h2>Havaiano</h2>
+         <p>Molho de tomate, mussarela, presunto e abacaxi</p>
+         <p class="preco">R$49.90</p>
+         <button onclick="addCart(4)" class="add-cart" >ADICIONAR AO CARRINHO</button>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="content-footer">
+      <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+      <p style="font-size: 18px;" class="link">Works <a href="#">Manage</a> © 2023</p>
+    </div>
+  </footer>
+  <script>
+    var lanches = [
+      {id: 1, name: 'Original', price: 36.0},
+      {id: 2, name: 'Salame', price: 40.0},
+      {id: 3, name: 'Frango', price: 29.90},
+      {id: 4, name: 'Havaiano', price: 49.90}
+    ];
+    
+    let sizeCart = 0;
+    
+    var order = [];
+    var total = 0;
+    function addCart(id){
+      for(let lanche of lanches){
+        if(lanche.id === id){
+          sizeCart++;
+          order.push(lanche);
+          total += lanche.price;
+          alert(`🛒 Carrinho: ${sizeCart} lanche(s)
+💳 Valor total: R$${total}`);
+          
+          if(sizeCart > 4){
+            var pay = 0;
+            
+            while(pay < total){
+              pay = parseFloat(prompt('💵 Quanato você deseja pagar: '));
+              alert('Saldo insuficiente!! Tente novamente.');
+            }
+            
+            const change = pay - total
+            
+            alert(`Obrigado!! Seu troco é de R$${change}`);
+          }
+          break;
+        }
+      }
+    }
+    
+  </script>
+</body>
+</html>

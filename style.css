@@ -1,0 +1,174 @@
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e6e6e6;
+}
+
+.line {
+  display: none;
+}
+@media (max-width: 768px) {
+  * {
+    font-family: Sans-Serif;
+  }
+  
+  header {
+    background-color: #272727;
+    width: 100vw;
+    padding: 12.5px;
+  }
+  
+  .content-header {
+    display: flex;
+    align-items: center;
+    width: 80%;
+  }
+  
+  .content-header img {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    padding: 3px;
+    border: 1.5px solid #fff;
+  }
+  
+  code {
+    color: orange;
+    font-size: 14px;
+    margin-left: 15px;
+  }
+  
+  .content-header h1 {
+    color: #fff;
+    margin-left: 15px;
+    font-size: 18px;
+  }
+  
+  .desc {
+    text-align: center;
+    width: 78%;
+    margin: 0 auto;
+  }
+  
+  #cardapio {
+    text-align: center;
+    margin-top: 32px;
+    color: #ff2121ff;
+    padding: 10px;
+    font-family: 'Barlow Condensed' Sans-Serif;
+  }
+  
+  .desc p {
+    font-size: 12px;
+    font-style: italic;
+    color: #444444;
+    text-align: justify;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .line {
+    display: flex;
+    width: 90%;
+    border: 1px solid #00000026;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /*grid-template-rows: repeat(4, auto);*/
+    gap: 20px;
+    width: 98%;
+    padding: 10px;
+    justify-items: center;
+    margin-bottom: 75px;
+  }
+  
+  .menu {
+    width: 80%;
+    background-color: #fff;
+    display: flex;
+    padding: 8px;
+  }
+  
+  .menu .photo-pizza {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu .photo-pizza img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 15px;
+    
+  }
+  
+  .menu .info-pizza h2{
+    font-size: 18px;
+    font-family: 'Barlow Condensed' Sans-Serif;
+  }
+  
+  .menu .info-pizza p {
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+  }
+  
+  .preco {
+    font-weight: bold;
+    color: #ff2121ff;
+    font-size: 17px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  
+  .add-cart {
+    border: none;
+    width: 100%;
+    padding: 10px;
+    transition: 0.3s;
+  }
+   .add-cart:hover{
+    cursor: pointer;
+    background-color: #a2a2a2;
+  }
+  
+  footer {
+    width: 106%;
+    height: 20vh;
+    background-color: #272727;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .content-footer {
+    width: 60%;
+    margin-top: 32px;
+  }
+  
+  .content-footer p {
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .link {
+    margin-top: 50px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .link a {
+    color: orange;
+  }
+  
+}
